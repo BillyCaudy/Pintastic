@@ -4,8 +4,8 @@
 | column name       | data type | details                   |
 |:------------------|:---------:|:--------------------------|
 | `id`              | integer   | not null, primary key     |
-| `username`        | string    | not null, indexed         |
-| `email`           | string    | not null, indexed, unique |
+| `username`        | string    | not null, indexed, unique |
+| `email`           | string    | not null, indexed         |
 | `firstname`       | string    | not null                  |
 | `lastname`        | string    | not null                  |         
 | `password_digest` | string    | not null                  |
@@ -50,7 +50,7 @@
 
 // We don't need a separate index for `board_id` because the first index adds it for us. ***???***
 
-## `board_followers`  
+## `board_follows`  
 | column name       | data type | details                           |
 |:------------------|:---------:|:----------------------------------|
 | `id`              | integer   | not null, primary key             |
