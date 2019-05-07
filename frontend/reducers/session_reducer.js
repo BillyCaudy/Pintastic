@@ -1,22 +1,22 @@
-import { CURRENT_USER, LOGOUT } from '../actions/session_actions'
 import merge from 'lodash/merge';
 
-const _nullState = Object.freeze({ 
-    id: null 
-}) 
+import {
+  RECEIVE_CURRENT_USER,
+} from '../actions/session_actions';
 
-const sessionReducer = ( stateIn = _nullState, action ) => {
-    Object.freeze(stateIn);
-    let stateOut = merge({},stateIn)
-    switch(action.type) {
-        case CURRENT_USER:
-            stateOut = merge(stateOut,{ id: action.currentUser.id })
-            break;  
-        case LOGOUT:
-            stateOut = merge({},_nullState)
-            break;
-    }
-    return stateOut;
+const _nullUser = Object.freeze({
+  currentUser: null
+});
+
+const sessionReducer = (state = _nullUser, action) => {
+  Object.freeze(state);
+  switch(action.type) {
+    case RECEIVE_CURRENT_USER:
+      const currentUser = action.currentUser;
+      return Object.assign({}, { currentUser });
+    default:
+      return state;
+  }
 };
 
 export default sessionReducer;

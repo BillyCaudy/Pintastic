@@ -1,19 +1,20 @@
-import {CURRENT_USER, SESSION_ERRORS} from '../actions/session_actions';
+import {
+  RECEIVE_SESSION_ERRORS,
+  RECEIVE_CURRENT_USER,
+} from '../actions/session_actions';
 
-const sessionErrorsReducer = (stateIn = [], action) => {
-    Object.freeze(stateIn);
-    let stateOut = stateIn.map(error => error)
-    switch(action.type) {
-        case CURRENT_USER:
-            stateOut = [];
-            break;
-        case SESSION_ERRORS:
-            stateOut = action.errors.map(error => error);
-            break;
-        default:
-            break;
-    }
-    return stateOut;
+import { CLOSE_MODAL } from '../actions/modal_actions';
+
+export default (state = [], action) => {
+  Object.freeze(state);
+  switch (action.type) {
+    case RECEIVE_SESSION_ERRORS:
+      return action.errors;
+    case RECEIVE_CURRENT_USER:
+    case CLOSE_MODAL:
+      return [];
+
+    default:
+      return state;
+  }
 };
-
-export default sessionErrorsReducer;

@@ -13,3 +13,149 @@
  *= require_tree .
  *= require_self
  */
+
+
+ ::-webkit-scrollbar {
+     width: 12px;
+ }
+
+ ::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+     border-radius: 10px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     border-radius: 10px;
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+ }
+
+  body {
+    font-family: 'Abel', sans-serif;
+  }
+
+ .content {
+   height: 100%;
+ }
+
+ .user-pane {
+   display: flex;
+   justify-content: center;
+ }
+
+ .index-item-info {
+   margin: 10px 10px 10px 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .index-item-category {
+   font-weight: bold;
+ }
+
+ .index-item-copy {
+   margin-left: 15px;
+ }
+
+ header {
+   margin-left: 5%;
+ }
+
+ h1, h5 {
+   margin-bottom: 0px;
+ }
+
+ .index-image {
+   max-height: 200px;
+   max-width: 100px;
+ }
+
+ .header-name {
+   margin: 7px 0 0 0;
+
+ }
+
+ .header-favorites {
+   margin: 4px 0 4px 0;
+   font-size: 14px;
+ }
+
+ .button-holder {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+ }
+
+ .login-form-container {
+   display: flex;
+   flex-direction: column;
+   width: 200%;
+   height: 200%;
+   justify-content: space-between;
+ }
+ 
+ .top-button {
+    align-self: flex-start;
+ }
+
+ .login-form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .login-input {
+   margin-left: 20px;
+ }
+
+ .login-form-box {
+   padding: 20px 60px 20px 60px;
+   background: white;
+   position: relative;
+   border-radius: 10px;
+   color: rgb(63, 63, 63);
+   text-align: center;
+ }
+
+ .login-form-box > p {
+    font-size: 40px    
+ }
+ 
+ .header-link {
+   text-decoration: none;
+   color: black;
+ }
+
+ hr {
+   border-bottom: 1px solid grey;
+ }
+
+ .session-submit {
+   text-transform: capitalize;
+ }
+
+ .modal-background {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 10;
+ }
+
+ .modal-child {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+
+ .close-x {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   cursor: pointer;
+   opacity: .3;
+   font-size: 40;
+ }
