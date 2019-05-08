@@ -72,7 +72,7 @@ class SessionForm extends React.Component {
                 placeholder="Password"
               />
               <input className="session-submit" type="submit" 
-                value={this.props.formType === 'login' ? "Log in" : "Continue"} 
+                value={this.props.formType === 'login' ? "Log in" : "Sign up"} 
               />
               <div className="or">OR</div>
               <button className="guest-submit" onClick={this.loginGuest}>Continue as Guest</button>

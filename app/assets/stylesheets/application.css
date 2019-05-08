@@ -15,7 +15,7 @@
  */
 
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 12px;
 }
 
@@ -27,15 +27,8 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
+} */
 
-#root {
-  font-family: 'Abel', sans-serif;
-  /* background-color: blueviolet; */
-  width: 100%;
-  height: 100%;
-  background-image: url("./frontend/components/splash.png");
-}
 
 /* 
 .content {
@@ -91,19 +84,13 @@ h1, h5 {
   flex-direction: column;
 } */
 
-/* 
 .splash {
-  background-color: blueviolet;
-  width: 100%;
-  height: 100%;
-  background-image: url("/../../../frontend/components/splash.png");
-} */
+  /* background-color: red; */
+}
 
-/* 
 .login-signup {
-  background-image: url("/../../../frontend/components/splash.png");
-  background-color: blueviolet;
-} */
+  /* background-color: white; */
+}
 
 .login-form-container {
   display: flex;
