@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { signup, receiveErrors } from '../../actions/session_actions';
+import { signup, login, receiveErrors } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 
 import SessionForm from './session_form';
@@ -15,6 +15,7 @@ const mapStateToProps = ({ errors }) => {
 const mapDispatchToProps = dispatch => {
   return {
     processForm: (user) => dispatch(signup(user)),
+    processGuest: (user) => dispatch(login(user)),
     otherForm: (
       <button className="switch-modals" onClick={() => dispatch(openModal('login'))}>
         Already a member?&nbsp;&nbsp;Log in

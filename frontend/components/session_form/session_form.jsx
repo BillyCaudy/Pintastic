@@ -31,18 +31,19 @@ class SessionForm extends React.Component {
   loginGuest(e) {
     e.preventDefault();
     const guest = { username: "guest", password: "passwrod" };
-    this.props.processForm(guest).then(this.props.closeModal);
+    this.props.processGuest(guest).then(this.props.closeModal);
   }
 
   renderErrors() {
     return(
-      <ul>
+      <div>
+        {this.props.errors.length > 0 ? <br /> : <div>&nbsp;</div>}
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <div className="print-errors">
             {error}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     );
   }
 
@@ -53,37 +54,30 @@ class SessionForm extends React.Component {
             <h1>  📌 <br/>
               Welcome to Pintastic
             </h1>
-            <br/>
             Find new ideas to try
-            <br />
             <div onClick={this.props.closeModal} className="close-x">✖️</div>
             {this.renderErrors()}
+            <br />
             <div className="login-form">
-              <br/>
-                <input type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className="login-input"
-                  placeholder="Email"
-                />
-              <br/>
-                <input type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="login-input"
-                  placeholder="Password"
-                />
-              <br/>
-              <input className="session-submit" type="submit" value={this.props.formType} />
-              
-              
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className="login-input"
+                placeholder="Username or email"
+              />
+              <input type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+                className="login-input"
+                placeholder="Password"
+              />
+              <input className="session-submit" type="submit" 
+                value={this.props.formType === 'login' ? "Log in" : "Continue"} 
+              />
+              <div className="or">OR</div>
+              <button className="guest-submit" onClick={this.loginGuest}>Continue as Guest</button>
             </div>
             <br />
-            OR
-            <br />
-            <button className="guest-submit" onClick={this.loginGuest}>Continue as Guest</button>
-            <br />
-
             {this.props.otherForm}
             <br />
           </form>

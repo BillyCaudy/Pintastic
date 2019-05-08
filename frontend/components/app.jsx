@@ -15,14 +15,9 @@ import SignupFormContainer from './session_form/signup_form_container.jsx';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
-  <div>
+  <div className="splash">
     <Modal />
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Pinterelated 🌍</h1>
-      </Link>
-      <GreetingContainer />
-    </header>
+    <GreetingContainer style="background-color: blueviolet;"/>
   </div>
 );
 
