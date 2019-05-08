@@ -1,8 +1,9 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
+import { closeModal, openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+// import { Link } from 'react-router-dom';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -21,8 +22,15 @@ function Modal({modal, closeModal}) {
   }
   return (
     <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
+      <button className="top-button" onClick={
+        e => e.stopPropagation().then( () => dispatch(openModal('signup')) )
+      }>&nbsp;&nbsp;Click Me&nbsp;&nbsp;</button>
+      <div className="auth-form" onClick={e => e.stopPropagation()}>
         { component }
+      </div>
+      <div className="bottom-links" onClick={e => e.stopPropagation()}>
+        Bottom Links&nbsp;&nbsp;&nbsp;&nbsp;
+        Don't Click Me Bruh
       </div>
     </div>
   );
