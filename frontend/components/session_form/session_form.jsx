@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
   loginGuest(e) {
     e.preventDefault();
-    const guest = { username: "guest", password: "passwrod" };
+    const guest = { username: "guest", password: "password" };
     this.props.processGuest(guest).then(this.props.closeModal);
   }
 
