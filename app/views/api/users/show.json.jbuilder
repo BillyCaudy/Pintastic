@@ -1,1 +1,1 @@
-json.partial! "api/users/user", user: @user
+json.partial! @user # "api/users/user", user: @user

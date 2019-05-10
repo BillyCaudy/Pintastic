@@ -88,8 +88,9 @@ h1, h5 {
   /* background-color: red; */
 }
 
-.login-signup {
-  /* background-color: white; */
+.login-signup, .personal-greeting { 
+  color: #333333;
+  font-size: 24px;
 }
 
 .login-form-container {
@@ -100,7 +101,7 @@ h1, h5 {
   border-radius: 8px;
 }
 
-.top-button {
+.top-button, .login-signup > button, .logout-button {
   position: absolute;
   top: 50px;
   left: 25px;
@@ -115,11 +116,11 @@ h1, h5 {
   outline-style: none;
 }
 
-.top-button:hover {
+.top-button:hover, .login-signup > button:hover, .logout-button:hover {
   background-color: #dfdfdf;
 }
 
-.top-button:active {
+.top-button:active, .login-signup > button:active, .logout-button:active  {
   box-shadow: 0 0 0 4px rgba(33,150,243,0.6);
 }
 
