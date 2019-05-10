@@ -3,11 +3,11 @@ import React from 'react';
 const Greeting = ({ currentUser, logout, openModal }) => {
 
   const sessionLinks = () => (
-    <nav className="login-signup">
+    <nav className="login-signup" onClick={() => openModal('signup')}>
       &nbsp;📌
-      <button onClick={() => openModal('signup')}>Enter</button>
     </nav>
   );
+
   const personalGreeting = () => (
     <hgroup className="personal-greeting">
       &nbsp;📌&nbsp;&nbsp;Welcome {currentUser.username}!&nbsp;&nbsp;

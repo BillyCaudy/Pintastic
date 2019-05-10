@@ -84,13 +84,14 @@ h1, h5 {
   flex-direction: column;
 } */
 
-.splash {
-  /* background-color: red; */
-}
-
 .login-signup, .personal-greeting { 
   color: #333333;
   font-size: 24px;
+  height: 100%;
+}
+
+.login-signup:hover {
+  cursor: pointer;
 }
 
 .login-form-container {
@@ -118,6 +119,7 @@ h1, h5 {
 
 .top-button:hover, .login-signup > button:hover, .logout-button:hover {
   background-color: #dfdfdf;
+  cursor: pointer;
 }
 
 .top-button:active, .login-signup > button:active, .logout-button:active  {
@@ -197,6 +199,7 @@ h1, h5 {
 
 .session-submit:hover {
   background-color: #d50012;
+  cursor: pointer;
 }
 
 .or {
@@ -212,6 +215,7 @@ h1, h5 {
 
 .guest-submit:hover {
   background-color: rgb(27, 109, 222);
+  cursor: pointer;
 }
 
 .modal-background {
@@ -229,6 +233,10 @@ h1, h5 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.switch-modals:hover {
+  cursor: pointer;
 }
 
 .close-x {
