@@ -4,7 +4,7 @@ import {signup, login, logout} from './actions/session_actions'
 import configureStore from './store/store';
 import Root from './components/root';
 
-// console.log("boop");
+//   console.log("booooop");
 document.addEventListener('DOMContentLoaded', () => {
 
     // console.log("beep");
