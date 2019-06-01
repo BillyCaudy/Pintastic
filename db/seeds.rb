@@ -8,5 +8,5 @@
 
 ActiveRecord::Base.transaction do 
 User.destroy_all
-guest = User.create!(username: 'guest', password: 'password')
+guest = User.create!(username: 'guest', email: 'guest@gmail.com', firstname: 'Guest', lastname: 'User', password: 'password')
 end
